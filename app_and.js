@@ -27,7 +27,7 @@ app.post('/post', (req, res) => {
    req.on('end', () => {
      console.log('user_id : '+inputData.user_id + ' , name : '+inputData.name);
    });
-   res.write(users[0]);
+   res.write(eval(users));
    res.end();
 });
 app.listen(process.env.PORT, () => {
