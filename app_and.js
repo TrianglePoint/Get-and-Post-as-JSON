@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-let users = {
+let users = [
   {
     "id": 1,
     "name": "alice"
@@ -13,7 +13,7 @@ let users = {
     "id": 3,
     "name": "chris"
   }
-}
+]
 app.get('/users', (req, res) => {
    console.log('who get in here/users');
    res.json(users)
@@ -27,7 +27,7 @@ app.post('/post', (req, res) => {
    req.on('end', () => {
      console.log('user_id : '+inputData.user_id + ' , name : '+inputData.name);
    });
-   res.write(users);
+   res.write(users[2]);
    res.end();
 });
 app.listen(process.env.PORT, () => {
