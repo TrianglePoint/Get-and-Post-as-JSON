@@ -1,0 +1,16 @@
+{
+  "name": "app_and",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app_and.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node app_and.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
