@@ -2,16 +2,16 @@ const express = require('express');
 const app = express();
 let users = [
   {
-    id: 1,
-    name: 'alice'
+    "id": 1,
+    "name": "alice"
   },
   {
-    id: 2,
-    name: 'bek'
+    "id": 2,
+    "name": "bek"
   },
   {
-    id: 3,
-    name: 'chris'
+    "id": 3,
+    "name": "chris"
   }
 ]
 app.get('/users', (req, res) => {
