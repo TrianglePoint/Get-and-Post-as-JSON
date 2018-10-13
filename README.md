@@ -1,4 +1,4 @@
-# Get-and-Post-as-JSON
+# get-and-post-as-json
 
 <h2>What is this?</h2>
 <p>This is NodeJs WebServer that communicate with the <a href="https://developer.android.com/reference/java/net/HttpURLConnection" target="_blank">HttpURLConnection</a> of Android.</p>
