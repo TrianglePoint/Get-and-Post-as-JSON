@@ -11,8 +11,8 @@
   "license": "MIT License",
   "dependencies": {
     "express": "^4.16.4"
-  }
-  "repository":{
+  },
+  "repository": {
     "type" : "git",
     "url": "https://github.com/TrianglePoint/get-and-post-as-json.git"
   }
