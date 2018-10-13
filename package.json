@@ -1,15 +1,19 @@
 {
-  "name": "app_and",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app_and.js",
+  "name": "get-and-post-as-json",
+  "version": "0.1.0",
+  "description": "Communicate with the HttpURLConnection of Android.",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["json","get","post"],
+  "author": "Kyuhyeon Kim",
+  "license": "MIT License",
   "dependencies": {
     "express": "^4.16.4"
+  }
+  "repository":{
+    "type" : "git",
+    "url": "https://github.com/TrianglePoint/get-and-post-as-json.git"
   }
 }
