@@ -1,35 +1,36 @@
 const express = require('express');
 const app = express();
+const port = 3000;
 let users = [
-  {
-    "id": 1,
-    "name": "alice"
-  },
-  {
-    "id": 2,
-    "name": "bek"
-  },
-  {
-    "id": 3,
-    "name": "chris"
-  }
-]
-app.get('/users', (req, res) => {
-   console.log('who get in here/users');
-   res.json(users)
+    {
+        id: "haha"
+    }
+];
+
+// Just connect http://url.com/
+app.get('/', (req,res)=>{
+    console.log('Someone request the get.')
+    res.end(users[0].id);
 });
-app.post('/post', (req, res) => {
-   console.log('who get in here post /users');
-   var inputData;
-   req.on('data', (data) => {
-     inputData = JSON.parse(data);
-   });
-   req.on('end', () => {
-     console.log('user_id : '+inputData.user_id + ' , name : '+inputData.name);
-   });
-   res.write(users[2]);
-   res.end();
+
+// Received request with data.
+app.post('/', (req,res)=>{
+    console.log('Someone request the post');
+    var inputData;
+    
+    // Parse received data.
+    req.on('data', (data) =>{
+        // Now inputData has Json object.
+       inputData = JSON.parse(data);
+    });
+    // Print inputData.
+    req.on('end',()=>{
+       console.log('inputed : ' + inputData.id);
+    });
+    // Send message.
+    res.write("Done! Great!");
+    res.end();
 });
-app.listen(process.env.PORT, () => {
-  console.log('Example app listening on port 3000!');
+app.listen(port, ()=>{
+    console.log('Running from ' + port);
 });
