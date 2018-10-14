@@ -1,6 +1,4 @@
-const fs = require('fs');
-
-function login_run(req, res, callback){
+function login_run(req, fs, callback){
     console.log('\n--------- LOGIN ---------');
     let inputData;
     let db, jsondb;
