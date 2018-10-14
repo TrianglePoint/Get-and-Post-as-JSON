@@ -1,36 +1,32 @@
 const express = require('express');
 const app = express();
+const url = require('url');
 const port = process.env.PORT;
-let users = [
-    {
-        id: "haha"
-    }
-];
+
+const login = require('./login');
+
+function printpathname(req, getOrpost){
+    let parseurl = url.parse(req.url);
+    console.log('\n ! Someone request the ' + getOrpost + ': ' + 
+               parseurl.pathname);
+}
 
 // Just connect http://url.com/
 app.get('/', (req,res)=>{
-    console.log('Someone request the get.')
-    res.end(users[0].id);
+    printpathname(req, 'get');
+    res.end();
 });
 
 // Received request with data.
-app.post('/', (req,res)=>{
-    console.log('Someone request the post');
-    var inputData;
-    
-    // Parse received data.
-    req.on('data', (data) =>{
-        // Now inputData has Json object.
-       inputData = JSON.parse(data);
+app.post('/login', (req,res)=>{
+    printpathname(req, 'post');
+    login.run(req, res, (result)=>{
+        res.write(result);
+        res.end();
+        console.log('-------------------------' + 
+                    '\n\n\nRunning from ' + port + '...');
     });
-    // Print inputData.
-    req.on('end',()=>{
-       console.log('inputed : ' + inputData.id);
-    });
-    // Send message.
-    res.write("Done! Great!");
-    res.end();
 });
 app.listen(port, ()=>{
-    console.log('Running from ' + port);
+    console.log('Running from ' + port + '...');
 });
