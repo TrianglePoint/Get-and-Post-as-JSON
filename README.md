@@ -1,13 +1,20 @@
 # get-and-post-as-json
 
-<h2>What is this?</h2>
-<p>This is NodeJs WebServer that communicate with the <a href="https://developer.android.com/reference/java/net/HttpURLConnection" target="_blank">HttpURLConnection</a> of Android.</p>
+<h3><b>Relationed project</b></h3>
+<ul>
+  <li><a href="https://github.com/TrianglePoint/manage-outlet" target="_blank">Android app</a></li>
+</ul>
+<hr />
 
-<h2>How do work?</h2>
-<p>'get' is just response the 'json.id'.<br />but 'post' is that for communicate with the android.</p>
-<h3>Progress of the 'post'</h3>
-<ol>
-  <li>Android send json using like login button to webserver.</li>
-  <li>WebServer parse the received json and print content of json.</li>
-  <li>WebServer send message to android.</li>
-</ol>
+<p>(This is part of Team project, so not yet can control the outlet)</p>
+
+<h2>What is this?</h2>
+<p>This is NodeJs WebServer that communicate with the <a href="https://github.com/TrianglePoint/manage-outlet" target="_blank">Android app</a>.<br />DB is json. not use sql.</p>
+
+<h2>What do work?</h2>
+<ul>
+  <li>Accept the login request</li>
+  <li>Send the outlet data to confirmed users</li>
+  <li>Set temperature of outlet in json data as received data from user</li>
+  <li>Set power of outlet in json data as received data from user</li>
+</ul>
