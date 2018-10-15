@@ -26,7 +26,9 @@ function temperature_run(req, fs, callback){
                 // Full overwrite.
                 jsondb.outlet[i].min = parseInt(inputData.min);
                 jsondb.outlet[i].max = parseInt(inputData.max);
-                db = JSON.stringify(jsondb);
+                
+                // Third parameter of stringify is how many type whitespace.
+                db = JSON.stringify(jsondb,null,4);
                 try{
                     fs.writeFileSync('./db/outlet.json', db, 'utf8');
                     return callback('Temperature');
