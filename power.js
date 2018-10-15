@@ -23,10 +23,12 @@ function power_run(req, fs, callback){
             if(inputData.name == jsondb.outlet[i].name){
                 let buf = [Buffer.from('true'), Buffer.from(inputData.power)];
                 
-                // Full overwrite.
                 jsondb.outlet[i].power = buf[0].equals(buf[1]);
-                db = JSON.stringify(jsondb);
+                
+                // Third parameter of stringify is how many type whitespace.
+                db = JSON.stringify(jsondb, null, 4);
                 try{
+                    // Full overwrite.
                     fs.writeFileSync('./db/outlet.json', db, 'utf8');
                     return callback('Power');
                 }catch(err){
