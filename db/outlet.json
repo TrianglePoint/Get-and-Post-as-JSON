@@ -1,1 +1,70 @@
-{"outlet":[{"name":"one","min":25,"max":30,"power":true},{"name":"two","min":45,"max":79,"power":false},{"name":"three","min":45,"max":90,"power":true}]}
+{
+    "outlet": [
+        {
+            "name": "one",
+            "min": 45,
+            "max": 60,
+            "power": true
+        },
+        {
+            "name": "two",
+            "min": 50,
+            "max": 79,
+            "power": true
+        },
+        {
+            "name": "three",
+            "min": 40,
+            "max": 51,
+            "power": true
+        },
+        {
+            "name": "four",
+            "min": 45,
+            "max": 55,
+            "power": true
+        },
+        {
+            "name": "five",
+            "min": 50,
+            "max": 87,
+            "power": true
+        },
+        {
+            "name": "six",
+            "min": 66,
+            "max": 99,
+            "power": false
+        },
+        {
+            "name": "seven",
+            "min": 46,
+            "max": 90,
+            "power": false
+        },
+        {
+            "name": "eight",
+            "min": 15,
+            "max": 42,
+            "power": true
+        },
+        {
+            "name": "nine",
+            "min": 25,
+            "max": 100,
+            "power": false
+        },
+        {
+            "name": "ten",
+            "min": 30,
+            "max": 68,
+            "power": true
+        },
+        {
+            "name": "eleven",
+            "min": 34,
+            "max": 75,
+            "power": true
+        }
+    ]
+}
