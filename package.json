@@ -14,8 +14,7 @@
   "author": "Kyuhyeon Kim",
   "license": "MIT License",
   "dependencies": {
-    "express": "^4.16.4",
-    "npm-check-updates": "^2.14.2"
+    "express": "^4.16.4"
   },
   "repository": {
     "type": "git",
